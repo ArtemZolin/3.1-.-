@@ -56,9 +56,10 @@
     
    </header> 
     <main class="main">
+      <div class="main__menu-list">
         <h1 class="title">Услуги и сервисы</h1>
        <!--кнопки в майне только для версии ПК --> 
-        <ul class="main__list">
+        <ul class="main__buttton-list">
            <!--значок оставить заявку (только для версии ПК) -->
           <li class="main__repair">
             <button class="main__button main__repair" type="button">Оставить заявку
@@ -70,6 +71,7 @@
           </button>
           </li>
         </ul>
+        </div>
         <!--кнопки навигации  -->
         <nav class="navigator">
             <button class="navigator__button buttonRepairedBrands" type="button">Ремонтируемые бренды</button>
@@ -84,20 +86,22 @@
         <section class="block-1">
           <!--Картинка   -->
                 <img class="Picture" src="imeges/img/Picture Copy.png" alt="Picture">
-           <!--кнопка далее--> 
-            <div class="block-1__expend ">
-                <button class="block-1__expend buttonReadMore" type="button">
-                    Читать далее
-                </button>
-            </div>
-            <!--текс  -->
+           <!--кнопку далее прикрутил к тесту--> 
+            <div class="block-1__boxTextButton">
+              <!--текс  -->
             <p class="block-1__text ">Мы являемся авторизованным сервисным центром по ремонту техники Dell.
                  Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.<br>
                   <br>
                 Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, 
                 что подтверждает большое количество постоянных клиентов. Мы гордимся тем, 
-                что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
-
+                что к нам обращаются по рекомендациям и, 
+                в свою очередь, советуют нас родным и близким.
+                
+              </p>
+                <button class="block-1__expend buttonReadMore" type="button">
+                    Читать далее
+                </button>
+              </div>
          </section>
     </main>
 </body>
