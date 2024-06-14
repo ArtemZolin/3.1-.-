@@ -6,6 +6,7 @@
     font-style: normal;
     font-display: swap;
 }
+
 @font-face {
     font-family: "TT Lakes";
     src: url("./font/TTLakes-Bold.woff") format(woff);
@@ -13,6 +14,7 @@
     font-style: normal;
     font-display: swap;
 }
+
 @font-face {
     font-family: "TT Lakes";
     src: url("./font/TTLakes-DemiBold.woff") format(woff);
@@ -21,114 +23,104 @@
     font-display: swap;
 }
 
-html{
+html {
     font-family: 'TT Lakes', sans-serif;
-    
 }
 
-.header{
+.header {
     display: flex;
     align-items: center;
     background-color: #FFFFFF;
     border-bottom: 1px solid #D9FFF5 ;
     padding:15px; 
     gap: 10px;
-    
 }
-.header__menu-list-left{
+
+.round-icon-list-left {
     display: flex;
     justify-content: start;
     align-items: center;
     width: 100%;
     gap: 10px;
     padding-left:10px;
-    
 }
     
-   
-
-.header__menu-list-right{
+.round-icon-list-right {
     display: flex;
     justify-content: end;
     align-items: center;
-    
     gap: 10px;
     padding-right: 10px;;
 }
 
-.header__menu-tablet{
+.round-icon-tablet {
     display: none;
 }
 
-
-.header__menu{
+.round-icon {
     width: 40px;
     height: 40px;
     display: inline-block;
     background-repeat: no-repeat;
 }
 
-.header__menu-divider{
+.round-icon-divider {
     width: 2px;
     height: 32px;
     display: inline-block;
     background-repeat: no-repeat;
 }
 
-.header__burger{
+.round-icon--burger {
     background-image: url(imeges/bacground/burger.png);
 }
-.header__divider-1{
+.round-icon--divider-1 {
     background-image: url(imeges/bacground/divider.png);
 }
 
-.header__call{
+.round-icon--call {
     background-image: url(imeges/bacground/call.png);   
 }
 
-.header__chat{
+.round-icon--chat {
     background-image: url(imeges/bacground/chat.png); 
 }
 
-.header__profile{
+.round-icon--profile {
     
     background-image: url(imeges/bacground/profile.png); 
 }
 
-.header__divider-2{
+.round-icon--divider-2 {
     background-image: url(imeges/bacground/divider\ \(1\).png);
- 
 }
 
-.header__repair{
+.round-icon--repair {
     background-image: url(imeges/bacground/repair.png);
 }
 
-.header__checkstatus{
+.round-icon--checkstatus {
     background-image: url(imeges/bacground/checkstatus.png);
-
 }
 
-.header__menu-button{
-    
+.round-icon-button {
     padding: 0;
     border: 0;
     background-color: transparent;
-
 }
 
-.main{
-    
+.main {
     display: flex;
     flex-wrap: wrap;
     background-color: #F8F8F8;
     height: auto;
     width: auto;
+    row-gap: 10px;
 }
 
-.title{
+.main__title {
     display: inline-block;
-    padding-left: 12px;
+    padding-left: 20px;
     font-size: 28px;
     margin: 20px 0;
     max-height: 40px;
@@ -140,11 +132,15 @@ html{
     white-space: nowrap;
 }
 
-
-.main__buttton-list{
+.main__buttton-list {
     display: none;
 }
+
 .navigator{
+    overflow: hidden;
+}
+
+.navigator__list {
     display: flex;
     flex-wrap: nowrap;
     font-weight: 600;
@@ -152,15 +148,15 @@ html{
     width: 100%;
     min-height: 40px;
     padding:0 10px;
-    -webkit-overflow-scrolling: touch;
     gap:5px;
-   
+    overflow-x: scroll;
 }
-.navigator::-webkit-scrollbar {
+
+.navigatorr__list::-webkit-scrollbar {
     width: 0;
   }
 
-.navigator__menu-link{
+.navigator__menu-link {
     background-color: transparent;
     border: 2px solid transparent;
     font-size: 16px; 
@@ -171,8 +167,8 @@ html{
     display: inline-block;
     line-height: 1;
     padding: 10px;
- 
 }
+
 .navigator__menu-link:hover,
 .main__button:hover
 {
@@ -181,38 +177,38 @@ html{
     border-radius: 6px;
 }
 
-
 /* Секция с тестом и картинкой */
-.block-1{
+
+/*Для чего в .block-1 используется row-reverse и column-reverse?
+    Чтобы поменять местами картинку и текст.
+*/
+.block-1 {
     display: flex;
     flex-direction: column-reverse;
     flex-wrap: nowrap;
     max-height: 100%;
     gap:10px;
-
 }
-.block-1__image{
+
+.block-1__image {
     width: 100%;
     height: auto;
- 
 }
 
-.block-1__box{
+.block-1__box {
     display: flex;
     flex-direction: column; 
     padding-left:10px ; 
     padding-right: 10px;   
 }
     
-.block-1__text{
+.block-1__text {
     max-height: 15vh;
     overflow: hidden;
 }
     
-.block-1__button{
+.block-1__button {
     font-size: 16px;
-   
-    
     font-weight: 600;
     background-color: transparent;
     border-color: transparent;
@@ -222,7 +218,6 @@ html{
     background-repeat: no-repeat;
     width: 160px;
     height: 29px;
-     
 }
 
 .block-1__button:hover {
@@ -234,75 +229,60 @@ html{
 
 /*---------------------------------Для планшета---------------------------------------*/
 
-@media (min-width:784px) {
+@media (min-width:768px) {
     /*манипуляции с шапкой черту передвинуть */
     
-    
-    .header__divider-1{
+    .round-icon--divider-1 {
         order: -1;
     }
-    .header__burger{
+
+    .round-icon--burger {
         order: -2;
     }
     
 
     /*показ скрытых кнопок навигации в header */
-   
-
-    .header__menu-tablet{
+    .round-icon-tablet {
         display: flex;
         justify-content: end;
         align-items: center;
         gap: 10px;
     }
 
-
-    .title{
-        padding-left: 20px;
+    .main__title {
+        padding-left: 25px;
     }
 
-    
-
-/*непонятная дичь с текстом и пикчей */
-
-    .block-1{
+/*Преобразование с текстом и пикчей */
+    .block-1 {
         flex-wrap: nowrap;
         flex-direction: row-reverse;
         align-items: start;
-        margin-top: 10px;
         width: 100%;
         height: 100%;
-        gap: 10px;
+        gap: 40px;
     }
     
-    .block-1__text{
-        max-height: 22vh;
-       
+    .block-1__text {
+        max-height: 30vh;
     }
       
-     .block-1__image{
+     .block-1__image {
         margin-right: 10px;
         border-radius: 10px;
-       
      }
-    
-
      
 }
-
-
-    
 
 
 /*--------------------------------------Для PC-------------------------------------*/
 
 @media(min-width:1121px){
 /*скрывание шапки и манипуляции с заголовком. */
- 
     .header{
         display: none;
     }
-    .title{
+    .main__title{
         margin-top: 30px;
         padding-left: 20px;
     }
@@ -313,7 +293,8 @@ html{
         justify-content: space-between;
         width: 100%;
     }
-    .title{
+
+    .main__title{
         background-image: url(imeges/bacground/highlight\ \(1\).png);
         width:3px;
         height:40px;
@@ -343,6 +324,7 @@ html{
         background-position: right;
         text-align: left;
     }
+
     .main__repair{
         display: inline-block;
         width: 184px;
@@ -353,19 +335,11 @@ html{
         text-align: left;
     }
     
-
-    .navigator{
+    
+    .navigator__list{
+        overflow: visible;
         flex-wrap: wrap;
     }
-    
-    
-/* с текстом  */
-    
-     
-   
-     
-    
-
 
 
 }
