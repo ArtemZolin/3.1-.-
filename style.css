@@ -103,12 +103,6 @@ html {
     background-image: url(imeges/bacground/checkstatus.png);
 }
 
-.round-icon-button {
-    padding: 0;
-    border: 0;
-    background-color: transparent;
-}
-
 .main {
     display: flex;
     flex-wrap: wrap;
@@ -147,7 +141,7 @@ html {
     align-items : end;
     width: 100%;
     min-height: 40px;
-    padding:0 10px;
+    padding:0 20px;
     gap:5px;
     overflow-x: scroll;
 }
@@ -187,7 +181,7 @@ html {
     flex-direction: column-reverse;
     flex-wrap: nowrap;
     max-height: 100%;
-    gap:10px;
+    gap:0px;
 }
 
 .block-1__image {
@@ -198,11 +192,14 @@ html {
 .block-1__box {
     display: flex;
     flex-direction: column; 
-    padding-left:10px ; 
+    padding-left:20px ; 
     padding-right: 10px;   
 }
     
 .block-1__text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     max-height: 15vh;
     overflow: hidden;
 }
@@ -249,7 +246,9 @@ html {
         gap: 10px;
     }
 
-    .main__title {
+    .main__title,
+    .navigator__list,
+    .block-1__box{
         padding-left: 25px;
     }
 
@@ -298,6 +297,11 @@ html {
         background-image: url(imeges/bacground/highlight\ \(1\).png);
         width:3px;
         height:40px;
+        padding-left: 30px;
+    }
+
+    .navigator__list,
+    .block-1__box{
         padding-left: 30px;
     }
 
